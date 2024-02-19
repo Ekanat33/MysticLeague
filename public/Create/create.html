@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>replit</title>
+  <link href="create.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=McLaren&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <style>
+    body {
+      background-color: #EBE4D1;
+      font-family: "McLaren", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .main {
+      background-color: #B4B4B3;
+      border-radius: 10px;
+    }
+  </style>
+
+</head>
+
+<body class='p-5'>
+  <div class='container-fluid p-2 h-50'>
+    <img src="../img/Logo.png"></img>
+  </div>
+
+  <div class="container-2">
+    <form action="" class="" id="signup-form">
+      <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-4 col-form-label-lg text">Room Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputRoomname">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-4 col-form-label-lg text">Password</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputRoomPassword">
+        </div>
+      </div>
+      <div class="row">
+        <p class="email col-4 text">Difficulty</p>
+        <div class="container col-8 justify-content-start">
+          <div class="form-check-label">
+            <input class="form-check-input radio-inline" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Normal">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Normal
+            </label>
+            <input class="form-check-input radio-inline" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Hard">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Hard
+            </label>
+
+          </div>
+        </div>
+      </div>
+      <p id='feedback-msg-signup'></p>
+
+      <div class="">
+
+        <button type="button"  id="createRoombtn" class="btn-second">Create
+          Room</button>
+      </div>
+    </form>
+
+  </div>
+  
+  <script>
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAuNjEjjJFqZ8QJPf1DHNNw-FasG9lLK-o",
+      authDomain: "mysticleague.firebaseapp.com",
+      databaseURL: "https://mysticleague-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "mysticleague",
+      storageBucket: "mysticleague.appspot.com",
+      messagingSenderId: "600887633717",
+      appId: "1:600887633717:web:b10e5a8735903605ff8e7c",
+      measurementId: "G-QBSLNN919Z"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="create.js"></script> 
+</body>
+
+</html>
