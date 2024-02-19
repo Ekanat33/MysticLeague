@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <title>Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=McLaren&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <style>
     html,
     body {
@@ -44,6 +49,40 @@
       border: solid 1px black;
       text-align: center;
     }
+
+    .q img {
+      max-width: 180%;
+      max-height: 180%;
+      width: auto;
+      height: auto;
+    }
+
+    #message {
+      font-size: 50px;
+      font-family: "McLaren", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      color: #26577c;
+    }
+
+    .btn-first {
+      margin-top: 10%;
+      width: 50%;
+      height: 60px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.435;
+      color: #26577c;
+      display: center;
+      align-items: center;
+      justify-content: center;
+      background-color: #e55604;
+      border-radius: 20px;
+      border-color: #e55604;
+      font-family: "McLaren", sans-serif;
+    }
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -57,7 +96,7 @@
 <body class="justify-content-center">
   <table class="table-md" style="margin: auto">
     <tr>
-      <td colspan="4" id="message">Let's pay Tic Tac Toe</td>
+      <td colspan="4" id="message">Mystic League</td>
     </tr>
     <tr>
       <td colspan="4" id="Roomattr"></td>
@@ -103,31 +142,31 @@
     </tr>
     <tr>
       <td class="q"></td>
-      <td class="q">MAN CITY</td>
-      <td class="q">LIVERPOOL</td>
-      <td class="q">CHELSEA</td>
+      <td class="q"><img src="../img/chelsea.png"></td>
+      <td class="q"><img src="../img/liverpool.png"></td>
+      <td class="q"><img src="../img/manu.png"></td>
     </tr>
     <tr>
-      <td class="q">SPAIN</td>
+      <td class="q"><img src="../img/brazil.png"></td>
       <td id="A0" class="table-block"></td>
       <td id="A1" class="table-block"></td>
       <td id="A2" class="table-block"></td>
     </tr>
     <tr>
-      <td class="q">BRAZIL</td>
+      <td class="q"><img src="../img/eng.png"></td>
       <td id="B0" class="table-block"></td>
       <td id="B1" class="table-block"></td>
       <td id="B2" class="table-block"></td>
     </tr>
     <tr>
-      <td class="q">FRANCE</td>
+      <td class="q"><img src="../img/spain.png"></td>
       <td id="C0" class="table-block"></td>
       <td id="C1" class="table-block"></td>
       <td id="C2" class="table-block"></td>
     </tr>
     <tr>
       <td id="footer" colspan="4">
-        <button id="btn-reset" onclick="newGame()">Reset</button>
+        <button id="btn-reset" class="btn-first" onclick="newGame()">Reset</button>
       </td>
     </tr>
   </table>
@@ -139,7 +178,7 @@
   </div>
 
   <!-- import external JavaScript file -->
-  
+
   <script>
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
